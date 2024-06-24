@@ -192,18 +192,18 @@ app.post("/sku-labs/orders/status/webhook", async (req, res) => {
   // Respond to the webhook sender
 });
 
-app.post("products/update-quantities", async (req, res) => {
-  try {
-    const skuResponse = await axios.get('https://api.skulabs.com/v1/your-endpoint', {
-      headers: {
-        'Authorization': `Bearer ${SKU_LABS_API_KEY}`
-      }
-    });
+// app.post("products/update-quantities", async (req, res) => {
+//   try {
+//     const skuResponse = await axios.get('https://api.skulabs.com/v1/your-endpoint', {
+//       headers: {
+//         'Authorization': `Bearer ${SKU_LABS_API_KEY}`
+//       }
+//     });
 
-    const skus = skuResponse.data.skus;
+//     const skus = skuResponse.data.skus;
 
-  }
-})
+//   }
+// })
 // Start the server
 app.listen(PORT, () => {
   console.log(`${getTimestamp()} Server is running on port ${PORT}`);
